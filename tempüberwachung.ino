@@ -3,32 +3,13 @@
 #include <Wire.h>
 #define LED            13 
 
+
 OneWire  ds(10);  // on pin 10 (a 4.7K resistor is necessary)
 
-//---wenn adressen u anzahl erst gesucht werden müssen
 byte test_addr[50][8]; //adressarray
 int sens_anzahl=0;     //geamtanzahl sensoren... wird im setup bestimmt
 bool initialread = false;
 
-//--- wenn adressen und anzahl fest vorgegeben sind
-/*byte test_addr[5][8]={
-  {
-    0x28,0x50,0x18,0x1F,0x0,0x0,0x80,0x5C  }
-  ,
-  {
-    0x28,0xD0,0x1A,0x1F,0x0,0x0,0x80,0x35  }
-  ,
-  {
-    0x28,0x28,0x13,0x8,0x0,0x0,0x80,0xAB  }
-  ,
-  {
-    0x28,0x42,0x18,0x1F,0x0,0x0,0x80,0x69  }
-  ,
-  {
-    0x28,0xF2,0x17,0x8,0x0,0x0,0x80,0xBF  }
-}; //adressarray*/
-
-//int sens_anzahl=5;     //geamtanzahl sensoren... wird im setup bestimmt
 
 
 int readnr=0; //sensor der gelesen werden soll
@@ -205,12 +186,6 @@ void readsensor(int sensor){
     //// default is 12 bit resolution, 750 ms conversion time
   }
   temp[sensor]=(float)raw / 16.0;
-
-  //  Serial.println("im arr ggespeicherter wert");
-
-  //Serial.println(temp[sensor]);
-
-  //return temp[sensor];
 }
 
 
