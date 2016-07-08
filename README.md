@@ -9,7 +9,7 @@ Sammelt Temperaturwerte von 1wire Temperatursensoren die an einem Arduino Nano a
 -über die sensor.json lassen sich den sensorid's feste Namen und erlaubte Temperaturen zuweisen.
 
 
-bsp:
+
 
 __Example__
 
