@@ -28,5 +28,7 @@
             "Spindel_PWM":      {
                                  "adresse":"28 e3 1f 1f 0 0 80 53",
                                  "maxtemp":"60"}
-                             }
+                             },
+    "CLIrefresh":500,
+    "CLIreadcontinuous" : true 
 }
