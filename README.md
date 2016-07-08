@@ -7,3 +7,24 @@ Sammelt Temperaturwerte von 1wire Temperatursensoren die an einem Arduino Nano a
 -erlaubt eine höhere sensoranzahl als der Raspberry allein. (bisher mit 24 stück getestet)
 
 -über die sensor.json lassen sich den sensorid's feste Namen und erlaubte Temperaturen zuweisen.
+
+
+bsp:
+
+__Example__
+
+```js
+var readtemp = require("./tempread.js");
+
+var config = require('./sensor.json');
+
+        readtemp.loadConfig(config,function(){
+            readtemp.init(function(){
+                readtemp.startread(0);  
+                
+                readtemp.CLIstart();
+                });
+        }); 
+
+```
+
