@@ -1,0 +1,32 @@
+{   "I2Cadresse":       "0xd",
+    "readcontinuous" : false ,
+    "readall" : true,
+    "refresh" : 300,
+    "Sensoren":{
+        
+            "x_Treiber":        {
+                                 "adresse":"28 50 18 1F 0 0 80 5C",
+                                 "maxtemp":"60"},
+            "y_Treiber":        {
+                                 "adresse":"28 D0 1A 1F 0 0 80 35",
+                                 "maxtemp":"60"},
+            "z_Treiber":        {
+                                 "adresse":"28 28 13 08 0 0 80 AB",
+                                 "maxtemp":"60"},
+            "x_Motor":          {
+                                 "adresse":"28 42 18 1F 0 0 80 69",
+                                 "maxtemp":"80"},
+            "y_Motor":          {
+                                 "adresse":"28 F2 17 08 0 0 80 BF",
+                                 "maxtemp":"80"},
+            "z_Motor":          {
+                                 "adresse":"28 76 1b 1f 0 0 80 16",
+                                 "maxtemp":"80"},
+            "Spindel":          {
+                                 "adresse":"28 9E 21 1F 0 0 80 a7",
+                                 "maxtemp":"80"},
+            "Spindel_PWM":      {
+                                 "adresse":"28 e3 1f 1f 0 0 80 53",
+                                 "maxtemp":"60"}
+                             }
+}
