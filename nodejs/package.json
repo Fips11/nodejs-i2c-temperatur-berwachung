@@ -1,0 +1,24 @@
+{
+  "name": "i2c-temperaturlogger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "i2c",
+    "1wire",
+    "onewire",
+    "temperature",
+    "cli"
+  ],
+  "author": "Fips11",
+  "license": "GPL-3.0",
+  "dependencies" :
+  { "clui" : "0.3.1"
+    ,"i2c-bus":"1.1.0"
+  
+  }
+
+}
