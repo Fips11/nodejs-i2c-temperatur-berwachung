@@ -3,6 +3,10 @@ var CLI = require('clui'),
     i2c = require('i2c-bus');
 
 var i2c1 = i2c.openSync(1);
+exports.cli_config={"refresh":500,
+                    "readcontinuous" : true 
+};
+
 exports.config = {"I2Cadresse":"",
                   "readcontinuous" : true ,
                   "readall" : true,
@@ -12,9 +16,7 @@ exports.config = {"I2Cadresse":"",
 };
 exports.onew_adressen=[];
 
-exports.cli_config={"refresh":500,
-                    "readcontinuous" : true 
-};
+
 
 var interval;
 
@@ -22,11 +24,15 @@ var interval;
 
 exports.loadConfig= function(obj,callback){
         
-        if(obj.readcontinuous){exports.config.readcontinuous = obj.readcontinuous;}
-        if(obj.refresh)       {exports.config.refresh        = obj.refresh;}
-        if(obj.readall)       {exports.config.readall        = obj.readall;}
-        if(obj.I2Cadresse)    {exports.config.I2Cadresse     = obj.I2Cadresse;}
-        if(obj.Sensoren)      {exports.config.Sensoren       = obj.Sensoren;}
+        if(obj.readcontinuous){exports.config.readcontinuous = obj.readcontinuous ;}
+        if(obj.refresh)       {exports.config.refresh        = obj.refresh        ;}
+        if(obj.readall)       {exports.config.readall        = obj.readall        ;}
+        if(obj.I2Cadresse)    {exports.config.I2Cadresse     = obj.I2Cadresse     ;}
+        if(obj.Sensoren)      {exports.config.Sensoren       = obj.Sensoren       ;}
+        
+        if(obj.I2Cadresse)    {exports.cli_config.refresh        = obj.CLIrefresh       ;}
+        if(obj.Sensoren)      {exports.cli_config.readcontinuous = obj.CLIreadcontinuous;}
+        
        
         if(callback)callback();
         
@@ -239,6 +245,7 @@ function stopread(callback){
                     .padding(2)
                     .column(name, 20, [clc.cyan])
                     .column(Gauge( temp, total, 50, warning , human), 70)
+                    
                     .fill()
                     .store();
       i++;
@@ -265,4 +272,4 @@ function standartId(input){//bringt unterschiedlich geschriebene 1wire ids in ei
 
 
 
-function Rundenkomma1(x) { Ergebnis = Math.round(x * 10) / 10 ; return
+function Rundenkomma1(x) { Ergebnis = Math.round(x * 10) / 10 ; return Ergebnis; }
