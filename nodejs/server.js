@@ -1,4 +1,4 @@
-var readtemp = require("./test/tempread.js");
+var readtemp = require("./tempread.js");
 var fs = require("fs");
 
 
